@@ -8,3 +8,4 @@ pyaudiowpatch
 SpeechRecognition==3.10.3
 Pillow==10.3.0
 dotenv
+groq

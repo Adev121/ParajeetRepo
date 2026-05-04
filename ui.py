@@ -164,8 +164,9 @@ class OverlayWindow(QMainWindow):
             btn.setObjectName("closeBtn")
             btn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
 
-        self.btn_passthrough.setToolTip("Toggle Click-Through  (Ctrl+Alt+C)")
+        self.btn_passthrough.setToolTip("Toggle Click-Through  (Ctrl+C)")
         self.btn_passthrough.clicked.connect(self.toggle_click_through)
+        self.btn_audio.setToolTip("Toggle Continuous Listening  (Ctrl+Shift+A)")
         self.btn_toggle.setToolTip("Hide / Show  (Ctrl+Shift+H)")
         self.btn_toggle.clicked.connect(self.toggle_visibility)
         btn_close.clicked.connect(QApplication.quit)
@@ -299,9 +300,11 @@ class OverlayWindow(QMainWindow):
             "Assistant Ready.\n\n"
             "Hotkeys:\n"
             "- **Ctrl+Shift+S** — Analyze Screen\n"
-            "- **Ctrl+Shift+A** — Listen Audio\n"
+            "- **Ctrl+Shift+A** — Toggle Continuous Listening\n"
             "- **Ctrl+Shift+H** — Hide / Show window\n"
-            "- **Ctrl+Alt+C** — Toggle Click-Through\n\n"
+            "- **Ctrl+C** — Toggle Click-Through\n\n"
+            "Click **🎙 Listen Audio** to start continuous listening.\n"
+            "Responses appear automatically on each pause in speech.\n\n"
             "Drag the top bar to move. Drag bottom-right corner to resize."
         )
 
